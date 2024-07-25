@@ -1,0 +1,27 @@
+<ImageSelector>:
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(10)
+
+    MDTopAppBar:
+        title: "Image Selector"
+        elevation: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: dp(10)
+        padding: dp(10)
+
+        MDRaisedButton:
+            text: "Select Images"
+            size_hint: None, None
+            size: dp(200), dp(50)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release: app.show_image_selector
+
+        MDRaisedButton:
+            text: "Upload Images"
+            size_hint: None, None
+            size: dp(200), dp(50)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release: root.open_file_manager
